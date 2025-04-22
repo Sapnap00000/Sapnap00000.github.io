@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  background-image: url(Image/pg.jpg); /* BACKGROUND IMAGE */
+  background-size: cover;
+  background-position: center;
+}
+
+/* MAIN CONTAINER */
+section {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+}
+section main {
+  padding: 90px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 600px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PROFILE IMAGE AND TITLE */
+section main img {
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  box-shadow: 0 0 5px 1px #3674b5;
+
+  animation: float 4s ease-in-out infinite;
+}
+section main h1 {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 600;
+  font-size: 3em;
+  color: #fbfbfb;
+  text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, 0.8);
+  margin-bottom: 60px;
+
+  animation: fadeInUp 1s ease-out;
+}
+/* ANIMATION FADE IN ON PROFILE AND TITLE */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* LINK TREE */
+section main a {
+  font-family: "Playwrite AU SA", cursive;
+  font-optical-sizing: auto;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid lightblue;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  gap: 18px;
+  transition: 0.3s;
+  color: white;
+  font-size: 1.4em;
+  backdrop-filter: blur(2px); /* EFFECTS BLUR ON BACKGROUND LINK */
+  transition: all 0.3s ease; /* HOVER EFFECT ON LINK */
+}
+/* HOVER EFFECT ON LINK */
+section main a:hover {
+  background-color: #08c2ff;
+  color: black;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 5px 1px #3674b5;
+}
+section main a i {
+  font-size: 1.2em;
+}
+
+/* FOOTER */
+section footer p {
+  color: #d1e8ef;
+  font-size: 0.7em;
+  padding: 20px;
+  text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+section footer p {
+  color: white;
+  font-size: small;
+  font-family: "Playwrite AU SA", cursive;
+}
